@@ -1,11 +1,11 @@
-const http = require('http')
+const express = require('express');
+const app = new express();
 
-// listen any port
 const port = process.env.PORT || 3000;
 
-http.createServer((request, response) => {
+app.use(express.static('asset'));
+app.get('/', (request, response) => {
 
-	response.write("Hello world");
-	response.end();
+	response.sendFile(__dirname + '/index.html');
 
 }).listen(port);
