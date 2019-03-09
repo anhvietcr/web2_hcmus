@@ -10,7 +10,9 @@ npm install
 
 Running
 ---------
-```npm start```
+```
+npm start
+```
 
 Overview
 ----------
@@ -19,4 +21,6 @@ Overview
 
 Commit
 --------
-`git rm -r --cached node_modules`
+```
+git rm -r --cached node_modules
+```
