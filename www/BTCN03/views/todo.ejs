@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+	<% include layouts/header %>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="jumbotron" style="background-color: #FEFEFE; border-radius: 20px; box-shadow: #c8cacc 0px 0px 9px 0px; margin: 20px 20px">
+                <a href="/logout" id="logout"><i class="fas fa-times-circle fa-2x"></i></a>
+                <div class="before-add row" style="justify-content: center">
+                    <div class="intro col-xs-6 col-sm-6 col-md-8">
+                        <span id="title">My Todo List </span>
+                        <br>
+                        <span id="today"></span>
+                    </div>
+                    <div class="schema col-xs-6 col-sm-6 col-md-4">
+                        <input type="checkbox" name="add" id="add">
+                        <label for="add" id="label-text"></label>
+                    </div>
+                </div>
+                <div class="after-add row" style="justify-content: center">
+                    <div class="text col-11">
+                    	<div id="close"><i class="fas fa-times-circle fa-1x"></i></div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="content" placeholder="Doing . . ." required>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="col-md-12" id="list-content">
+                	<% todos.forEach((todo) => { %>
+	                	<div class='form-check'>
+	            			<label id="<%= todo.id %>">
+	            				<input type='checkbox' name='check' 
+								
+								<%if (todo.state == 'true') { %>
+									checked
+								<% } %>>
+
+	            				<span class='label-text'><%= todo.name %></span>
+	            				<span class='label-text' id='timer'><%= todo.time %></span>
+	            			</label>
+	            		</div>
+					<% }) %>		
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/todo.js"></script>
+</body>
+</html>

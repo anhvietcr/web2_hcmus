@@ -1,0 +1,27 @@
+{
+  "name": "web2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "btcn02-install": "cd www/BTCN02 && npm install",
+    "btcn03-install": "cd www/BTCN03 && npm install",
+    "btcn02": "cd www/BTCN02 && npm start",
+    "btcn03": "cd www/BTCN03 && npm start",
+    "postinstall": "concurrently \"npm run btcn02-install\" \"npm run btcn03-install\"",
+    "start": "concurrently \"npm run btcn02\" \"npm run btcn03\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhvietcr/web2_hcmus.git"
+  },
+  "author": "anhvietcr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anhvietcr/web2_hcmus/issues"
+  },
+  "homepage": "https://github.com/anhvietcr/web2_hcmus#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

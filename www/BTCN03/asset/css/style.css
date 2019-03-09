@@ -1,0 +1,226 @@
+/*Custom style by Anhvietcr*/
+html, body	{
+	margin: 0;
+	padding: 0;
+}
+
+#insert, #close, #logout {
+    cursor: pointer;
+}
+#insert {
+    color: green;
+}
+#close {
+    color: red;
+    position: absolute;
+    right: 5px;
+}
+#logout {
+    color: #9c9c9c;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+#logout:hover {
+    color: #000;
+}
+
+/* Title */
+#title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.before-add .intro {
+    line-height: 2.5em;
+    padding: 4px;
+}
+
+.before-add {
+    position: relative;
+    text-align: center;
+    padding-left: 22px;
+}
+
+.before-add input[type="checkbox"] {
+    position: absolute;
+    right: 9000px;
+    padding: 0px 10px;
+    display: inline-flex;
+}
+
+.before-add input[type="checkbox"] + #label-text:before {
+    content: "\f271";
+    font-family: "Font Awesome 5 Free";
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing:antialiased;
+    width: 1em;
+    display: inline-block;
+    font-size: 50px;
+    color: #2980b9;
+    cursor: pointer;
+}
+
+.after-add {
+    display: none;
+}
+
+.after-add .action,
+.after-add .text {
+    position: relative;
+    animation: fadeIn .5s linear;
+}
+
+.after-add .text {
+    position: relative;
+    padding: 0;
+    background-color: #9f9f9f;
+}
+
+.after-add .text input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+}
+
+.form-group {
+    margin-bottom: 0 !important;
+}
+
+#FadeOut { display: none}
+
+@keyframes fadeIn {
+    0% {opacity: 0; right: -99999px}
+    25% {opacity: 0.5;right: -30px}
+    100% { opacity: 1;right: 0}
+}
+
+/* Content */
+#list-content label {
+	position: relative;
+	cursor: pointer;
+	color: #666;
+	font-size: 20px;
+    width: 100%;
+}
+
+#list-content input[type="checkbox"] {
+	position: absolute;
+	right: 9000px;
+    padding: 0px 10px;
+}
+
+.form-check {
+    margin: 40px 0px;
+    padding: 0px;
+}
+
+#list-content {
+    .overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+}
+#timer {
+    position: absolute;
+    right: 0%;
+    top: 5px;
+    font-size: 15px;
+    overflow-x: hidden;
+    display: inline-block;
+}
+
+/*Check box*/
+#list-content input[type="checkbox"] + .label-text:before{
+	content: "\f111";
+    font-family: "Font Awesome 5 Free";
+	speak: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 30px;
+    font-size: 20px;
+}
+#list-content input[type="checkbox"] + .label-text:after {
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    border: 0.5px solid #d0d0d1;
+    position: absolute;
+    display: flex;
+    margin-left: 2.5em;
+    margin-top: 5px;
+}
+#list-content input[type="checkbox"]:checked + .label-text {
+    color: #d0d0d1;
+}
+#list-content input[type="checkbox"]:checked + .label-text:before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+	color: #2980b9;
+	animation: effect 250ms ease-in;
+	font-weight: 900;
+}
+
+#list-content input[type="checkbox"]:checked + .label-text:after{
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    border: 0.5px solid #d0d0d1;
+    position: absolute;
+    display: flex;
+    margin-left: 2.5em;
+    margin-top: 5px;
+    bottom: 14px;
+    animation: smooth .2s linear;
+}
+
+@keyframes effect{
+	0%{transform: scale(0);}
+	25%{transform: scale(1.3);}
+	75%{transform: scale(1.7);}
+	100%{transform: scale(1);}
+}
+
+@keyframes smooth {
+    0% {bottom: 0px}
+    25%{bottom: 5px}
+    75%{bottom: 10px}
+    100% {bottom: 15px}
+}
+
+.frmLogin {
+    background-color: #fff;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #A29D9D;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+    top: 100px;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+
+.frmLogin label {
+    font-size: 15px;
+    padding: 10px 0px 0px;
+}
+
+.frmLogin button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.frmLogin > .submit-group {
+    text-align: center;
+    font-size: 15px;
+    line-height: 35px;
+}
